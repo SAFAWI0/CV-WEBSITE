@@ -50,8 +50,6 @@ body {
   margin-bottom: 20px;
 }
 
-
-
 /* Start top-half */
 .top-half {
   display: grid;
@@ -357,3 +355,46 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.content,
+.name p {
+  animation: fadeIn 1.2s ease-in-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadedown {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.line,
+.line2,
+.line3 {
+  animation: fadedown 1.2s ease-in-out;
+  animation-delay: 0.3s;
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.content i {
+  animation: rotate360 3s linear;
+}
